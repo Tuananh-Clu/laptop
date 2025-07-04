@@ -5,7 +5,6 @@ import App from './App.jsx'
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom';
 import { CartContext, CartProvider } from './CartContext.jsx'
-import { Toaster } from 'react-hot-toast'
 import { ViewProvider } from './ViewSelectionProduct.jsx'
 
 
