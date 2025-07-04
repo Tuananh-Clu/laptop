@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
+import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
