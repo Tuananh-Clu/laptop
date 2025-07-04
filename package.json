@@ -18,6 +18,7 @@
     "react-router-dom": "^7.6.2",
     "react-tailwind": "^0.0.0",
     "tailwindcss": "^4.1.11",
+    "tailwindcss-animated": "^2.0.0",
     "three": "^0.177.0"
   },
   "devDependencies": {
