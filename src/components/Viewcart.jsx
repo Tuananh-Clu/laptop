@@ -30,7 +30,7 @@ const Viewcart = () => {
         )}
 
         {ToggleCart && (
-          <div className='absolute top-10 right-0 z-[9999] w-80 bg-gray-800 text-white p-5 rounded-xl shadow-xl'>
+          <div className='absolute top-10 md:right-0 right-[-40px] z-[9999] w-80 bg-gray-800 text-white p-5 rounded-xl shadow-xl'>
             <h1 className="text-lg font-semibold mb-2">
               {cart.length > 0 ? "Giỏ Hàng Của Bạn" : "Giỏ Hàng Trống"}
             </h1>

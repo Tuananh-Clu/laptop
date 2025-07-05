@@ -13,9 +13,9 @@ const Menu = () => {
   return (
     <div data-aos="fade-up"
      data-aos-duration="1000"  className='w-full text-center items-center mt-20'>
-        <h1 className='text-4xl font-bold'>HELP ME CHOOSE</h1>
+        <h1 className='md:text-4xl text-3xl font-bold'>HELP ME CHOOSE</h1>
         <p>Tell us what you need. We'll help you choose the right products.</p>
-        <div className='grid md:grid-cols-5  gap-5 md:px-40 px-20 mt-10'>
+        <div className='grid md:grid-cols-5  gap-5 md:px-40 p-5 mt-10'>
             <select onChange={(e)=>{setFilters((prev)=>({...prev,series:e.target.value}))}} className='border-1 outline-none p-1 border-gray-300 '>
                 <option>SERIES</option>
                 <option value={"ROG Flow"}>ROG Flow</option>
