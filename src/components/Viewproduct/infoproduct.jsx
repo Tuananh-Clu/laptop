@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import { Model } from '../../assets/assets';
 import { useParams } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 
 
 const Infoproduct = () => {
