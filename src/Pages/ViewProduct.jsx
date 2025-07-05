@@ -44,7 +44,7 @@ const {id}=useParams();
                    />
                    <div className='flex flex-row items-center gap-3'>
                       <i onClick={back} class="fa-solid fa-arrow-right fa-flip-horizontal fa-xl"></i>
-                <div  className='md:w-[500px] w-[400px] flex flex-row gap-10 items-center  overflow-x-hidden rounded-2xl '>
+                <div  className='md:w-[500px] w-[300px] flex flex-row gap-10 items-center  overflow-x-hidden rounded-2xl '>
                     {product.Images.map((img,i)=>{
                       return(
                           <img onClick={()=>{setPic(img.image)}} style={{ transform: `translateX(${tx}px)` }} className=' w-[100px] object-cover hover:border-4 hover:border-red-500 transition-transform rounded-2xl' src={img.image} key={i}></img>

@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react'
 import { CartContext } from '../CartContext'
 import { Model } from '../assets/assets';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import React from 'react';
     
 
@@ -10,6 +10,7 @@ const Viewcart = () => {
     const [ToggleCart,setToggleCart]=useState(false)
      const {id}=useParams();
      const product=Model.find((item)=>item.code===id);
+     const navigate=useNavigate();
   return (
     <>
       <div className='relative h-full'>
@@ -66,9 +67,7 @@ const Viewcart = () => {
             {cart.length > 0 && (
               <>
                 <hr className="my-3 border-gray-600" />
-                <div className='flex flex-row justify-between'>
-                    {cart.length === 0 ? "" : <h1 onClick={DeleteAll} className='text-red-500 cursor-pointer' >Xóa Tất Cả</h1>}
-                    <h1 className="text-right font-bold">
+                 <h1 className="text-right font-bold">
                   Tổng:{" "}
                   {cart.reduce((sum, item) =>
                     sum + (
@@ -80,6 +79,10 @@ const Viewcart = () => {
                     ), 0
                   ).toLocaleString("vi-VN")}₫
                 </h1>
+                 <hr className="my-3 border-gray-600" />
+                <div className='flex flex-row justify-between items-center'>
+                    {cart.length === 0 ? "" : <h1 onClick={DeleteAll} className='text-red-500 cursor-pointer' >Xóa Tất Cả</h1>}
+                   <button onClick={()=>{navigate("/Payment")}} className='cursor-pointer bg-red-400 p-2 rounded-xs'>Thanh Toán</button>
                 </div>
                 
               </>
